@@ -709,7 +709,8 @@ section {
   overflow: hidden;
   transition: all 0.3s;
   position: relative;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -750,14 +751,19 @@ section {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.65rem;
   letter-spacing: 0.1em;
-  color: var(--accent3);
-  border: 1px solid rgba(246,173,85,0.3);
-  background: rgba(246,173,85,0.08);
+  color: var(--accent2);
+  border: 1px solid rgba(79,209,197,0.3);
+  background: rgba(79,209,197,0.08);
   padding: 6px 14px;
   border-radius: 100px;
 }
 
-.project-body { padding: 22px; }
+.project-body { 
+  padding: 22px; 
+  display: flex; 
+  flex-direction: column; 
+  flex: 1; 
+}
 
 .project-num {
   font-family: 'JetBrains Mono', monospace;
@@ -780,12 +786,14 @@ section {
   color: var(--text-dim);
   line-height: 1.6;
   margin-bottom: 16px;
+  flex: 1;
 }
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  margin-bottom: 16px;
 }
 
 .ptag {
@@ -797,6 +805,31 @@ section {
   background: rgba(99,179,237,0.07);
   border: 1px solid rgba(99,179,237,0.15);
   color: var(--accent);
+}
+
+.project-action-links {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.project-btn-link {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-btn-link:hover {
+  color: var(--accent);
+}
+
+.project-btn-link.highlight {
+  color: var(--accent);
+  font-weight: 500;
 }
 
 /* ====== SERVICES ====== */
@@ -1434,20 +1467,32 @@ footer {
         <div class="section-label reveal">Work</div>
         <h2 class="section-title reveal">Featured <em>Projects</em></h2>
       </div>
-      <div class="projects-note reveal">🚧 Real projects coming soon</div>
+      <div class="projects-note reveal">🚀 Production Live Apps &amp; Code</div>
     </div>
 
     <div class="projects-grid">
+      <!-- PROJECT 001: AI DATA ANALYST AGENT -->
       <div class="project-card reveal">
         <div class="project-thumb">
-          📊
-          <div class="coming-soon-overlay"><span class="cs-badge">Coming Soon</span></div>
+          🤖
         </div>
         <div class="project-body">
-          <div class="project-num">PROJECT / 001</div>
-          <div class="project-name">Data Analysis & Insights</div>
-          <p class="project-desc">End-to-end exploratory data analysis uncovering trends and patterns from a real-world dataset.</p>
-          <div class="project-tags"><span class="ptag">Python</span><span class="ptag">Pandas</span><span class="ptag">EDA</span></div>
+          <div class="project-num">FEATURED PROJECT / 001</div>
+          <div class="project-name">AI Data Analyst Agent</div>
+          <p class="project-desc">Full-stack web application built with Flask, Pandas, Plotly, and Gemini AI allowing users to upload datasets and query analytical insights in natural language.</p>
+          <div class="project-tags">
+            <span class="ptag">Python</span>
+            <span class="ptag">Flask</span>
+            <span class="ptag">Pandas</span>
+            <span class="ptag">Gemini AI</span>
+            <span class="ptag">Plotly</span>
+          </div>
+          <div class="project-action-links">
+            <!-- REPLACE 'your-app-name' WITH YOUR REAL RENDER LIVE APP URL -->
+            <a href="https://your-app-name.onrender.com" target="_blank" rel="noopener noreferrer" class="project-btn-link highlight">Live Demo ↗</a>
+            <!-- REPLACE 'YOUR_USERNAME' WITH YOUR REAL GITHUB USERNAME -->
+            <a href="https://github.com/YOUR_USERNAME/AI_Data_Analyst_Agent" target="_blank" rel="noopener noreferrer" class="project-btn-link">GitHub Code ↗</a>
+          </div>
         </div>
       </div>
 
