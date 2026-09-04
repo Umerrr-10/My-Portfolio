@@ -139,4 +139,3 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-Just copy this entire block, paste it into a new file named `README.md` in your GitHub repository, and it's done. 🚀
